@@ -12,6 +12,7 @@
 		53A9CA651C8CBB8500B825F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A9CA631C8CBB8500B825F3 /* Main.storyboard */; };
 		53A9CA671C8CBB8500B825F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A9CA661C8CBB8500B825F3 /* Assets.xcassets */; };
 		53A9CA6A1C8CBB8500B825F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A9CA681C8CBB8500B825F3 /* LaunchScreen.storyboard */; };
+		53A9CA771C8CC62500B825F3 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A9CA761C8CC62500B825F3 /* SimplePing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		53A9CA661C8CBB8500B825F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A9CA691C8CBB8500B825F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A9CA6B1C8CBB8500B825F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53A9CA741C8CC62400B825F3 /* browser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "browser-Bridging-Header.h"; sourceTree = "<group>"; };
+		53A9CA751C8CC62500B825F3 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimplePing.h; path = ../../../Downloads/SimplePing/SimplePing.h; sourceTree = "<group>"; };
+		53A9CA761C8CC62500B825F3 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimplePing.m; path = ../../../Downloads/SimplePing/SimplePing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,15 @@
 		53A9CA5E1C8CBB8500B825F3 /* browser */ = {
 			isa = PBXGroup;
 			children = (
+				53A9CA751C8CC62500B825F3 /* SimplePing.h */,
+				53A9CA761C8CC62500B825F3 /* SimplePing.m */,
 				53A9CA5F1C8CBB8500B825F3 /* AppDelegate.swift */,
 				53A9CA611C8CBB8500B825F3 /* ViewController.swift */,
 				53A9CA631C8CBB8500B825F3 /* Main.storyboard */,
 				53A9CA661C8CBB8500B825F3 /* Assets.xcassets */,
 				53A9CA681C8CBB8500B825F3 /* LaunchScreen.storyboard */,
 				53A9CA6B1C8CBB8500B825F3 /* Info.plist */,
+				53A9CA741C8CC62400B825F3 /* browser-Bridging-Header.h */,
 			);
 			path = browser;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A9CA771C8CC62500B825F3 /* SimplePing.m in Sources */,
 				53A9CA621C8CBB8500B825F3 /* ViewController.swift in Sources */,
 				53A9CA601C8CBB8500B825F3 /* AppDelegate.swift in Sources */,
 			);
@@ -249,10 +257,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = browser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.malex.browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "browser/browser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +271,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = browser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.malex.browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "browser/browser-Bridging-Header.h";
 			};
 			name = Release;
 		};
